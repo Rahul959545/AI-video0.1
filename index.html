@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Text-to-Video Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>AI Text-to-Video Generator</h1>
+
+    <textarea id="scriptInput" placeholder="Enter your script here..."></textarea>
+
+    <label for="visualStyle">Visual Style:</label>
+    <select id="visualStyle">
+      <option value="3D">3D</option>
+      <option value="2D">2D</option>
+      <option value="Cinematic">Cinematic</option>
+      <option value="Cartoon">Cartoon</option>
+    </select>
+
+    <label for="charStyle">Character Style:</label>
+    <input type="text" id="charStyle" placeholder="Default" />
+
+    <label for="language">Voiceover Language:</label>
+    <select id="language">
+      <option value="en-US">English</option>
+      <option value="hi-IN">Hindi</option>
+      <option value="es-ES">Spanish</option>
+      <option value="fr-FR">French</option>
+    </select>
+
+    <button onclick="generateVideo()">Generate Video</button>
+
+    <div id="videoSection" class="hidden">
+      <h2>Preview:</h2>
+      <video id="videoPlayer" controls></video>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
